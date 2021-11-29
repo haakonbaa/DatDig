@@ -246,7 +246,7 @@ class Asm():
 
             case ['INV'  ,AsmReg(value=ri),AsmReg(value=rj)]:
                 rj = self.reg[rj]
-                self.reg[ri] = ~rj
+                self.reg[ri] = (1 << 32) - 1 - rj
                 self.Z = self.reg[ri] == 0
                 return f'{ri} = ~{rj:08X} = 0x{self.reg[ri]:08X} | z = {self.Z}'
 
