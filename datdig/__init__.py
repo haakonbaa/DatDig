@@ -345,34 +345,3 @@ __all__ = ['Asm']
 
 if __name__ == '__main__':
     pass
-#     data = {0xFFFF0000:0x00000001,
-#     0xFFFF0001:0x00000002,
-#     0xFFFF0002:0x00000003,
-#     0xFFFF0003:0x00000004,
-#     0xFFFF0004:0xFFFF0005}
-
-#     registers = {'R0':0xFFFF0000, 
-#     'R1':0xFFFF0001, 
-#     'R3':0xFFFF0002, 
-#     'R4':0xFFFF0003, 
-#     'R5':0x00000004}
-    
-#     code = r'''
-# 0x0000FFFE: LOAD R8, R0; 
-# 0x0000FFFF: INC R0, R0; 
-# 0x00010000: LOAD R9, R0; 
-# 0x00010001: INC R0, R0; 
-# 0x00010002: LOAD R10, R0; 
-# 0x00010003: INC R0, R0; 
-# 0x00010004: LOAD R11, R0; 
-# 0x00010005: MUL R8, R8, R9; 
-# 0x00010006: MUL R9, R9, R10; 
-# 0x00010007: MUL R10, R10, R11; 
-# 0x00010008: ADD R8, R8, R9; 
-# 0x00010009: ADD R8, R8, R10;'''
-#     emulator = Asm()
-#     emulator.set_memory(data)
-#     emulator.set_instrucs(code,inc_loc=True)
-#     emulator.set_registers(registers)
-#     print(emulator)
-#     emulator(PC=0x0000FFFE,out = True)
